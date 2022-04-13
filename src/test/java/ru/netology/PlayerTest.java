@@ -33,9 +33,9 @@ public class PlayerTest {
     public void shouldSumGenreIfTwoGames() {
         Player player = new Player("Petya");
         player.installGame(game);
-        player.play(game1, 3);
+        player.play(game, 3);
         player.installGame(game1);
-        player.play(game2, 5);
+        player.play(game1, 5);
 
         int expected = 8;
         int actual = player.sumGenre(game1.getGenre());
@@ -49,11 +49,11 @@ public class PlayerTest {
     public void shouldSumGenreIfThreeGames() {
         Player player = new Player("Petya");
         player.installGame(game);
-        player.play(game1, 3);
+        player.play(game, 3);
         player.installGame(game1);
-        player.play(game2, 5);
+        player.play(game1, 5);
         player.installGame(game2);
-        player.play(game3, 5);
+        player.play(game2, 5);
 
         int expected = 13;
         int actual = player.sumGenre(game1.getGenre());
